@@ -1,0 +1,40 @@
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+}
+.App > form {
+  height: 350px;
+  width:auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 15px
+}
+.App > form > label {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 50px;
+}
+.App > form > label > input {
+  padding: 5px;
+  width: 250px;
+  line-height: 25px;
+  border: none;
+  border-bottom: 1px solid black;
+  background-color: transparent;
+}
+.App > form > label > input:focus,
+.App > form > label > input:active {
+  border: none;
+  outline: none;
+}
+.App > form > button {
+  padding: 12px;
+  background-color: transparent;
+  border-radius: 5px;
+}
