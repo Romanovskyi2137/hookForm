@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { FormEvent, useState } from "react";
 
 interface FormData {
     name: string
@@ -12,7 +12,7 @@ export function Form () {
         pwd: "",
         email: ""
     });
-    const formSubmit = (e:any) => {
+    const formSubmit = (e: FormEvent) => {
         e.preventDefault();
         console.log(formData);
     }
