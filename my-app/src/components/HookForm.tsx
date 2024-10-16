@@ -5,6 +5,7 @@ interface HookFormData {
     name: string
     pwd: string
     email: string
+    check: boolean
 }
 
 export function HookForm () {
@@ -16,7 +17,8 @@ export function HookForm () {
     const defaultValue = {
         name: "some def name",
         pwd: "some def pwd",
-        email: "some def email"
+        email: "some def email",
+        check: true
     }
     return (
         <form onSubmit={handleSubmit(formSubmit)}>
@@ -53,6 +55,7 @@ export function HookForm () {
             <label>
                 <span>Email:</span>
                 <input
+                    type="email"
                     placeholder="email"
                     {...register("email", {
                         required: "email is required",
@@ -64,6 +67,16 @@ export function HookForm () {
                 />
             </label>
             {errors.email && <span>{errors.email.message}</span>}
+            <label className="checkbox_label">
+                <input
+                    type="checkbox"
+                    {...register("check", {
+                        required: "you will agree with..."
+                    })}
+                />
+                <span>are you agree with...</span>
+            </label>
+            {errors.check && <span>{errors.check.message}</span>}
             <button type="submit">Complete</button>
         </form>
     )

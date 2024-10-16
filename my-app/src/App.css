@@ -5,8 +5,8 @@
   min-height: 100%;
 }
 .App > form {
-  height: 350px;
-  width:auto;
+  min-height: 350px;
+  width: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -37,4 +37,17 @@
   padding: 12px;
   background-color: transparent;
   border-radius: 5px;
+}
+.checkbox_label {
+  flex-direction: row !important;
+  justify-content: flex-start !important;
+  align-items: center;
+}
+.checkbox_label > input {
+  height: 15px;
+  max-width: 15px;
+  margin: 0 15px ;
+}
+.checkbox_label > span {
+
 }
